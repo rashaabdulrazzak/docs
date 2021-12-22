@@ -524,10 +524,11 @@ _(from the AssemblyScript documentation):_
 var arr = new Array<string>(10);
 // arr.length == 10 -> ERROR
 
-// To account for this, the .create method has been introduced that initializes
+// The below method Array.create deprecated  gives an error when using it 
+// To account for this, the .create method has been introduced that initializes 
 // the backing capacity normally but leaves `.length = 0`. So, this will work:
 var arr = Array.create<string>(10);
-// arr.length == 0 -> OK
+// arr.length == 0 -> OK 
 
 // When pushing to the latter array or subsequently inserting elements into it,
 // .length will automatically grow just like one would expect, with the backing
